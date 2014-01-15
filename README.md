@@ -1,19 +1,23 @@
-
 The Key-Value store
 
-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 
 1. Copy "/usr/lib/go/src/pkg/github.com/onkarkore/kvstore/createfile.py" to current working directory.
 
 
-2. Start the server by running following command
-	go run keyvalueserver.go
-	OR
-	by executing keystore binary file
+2. Start the server by running following command 
+ 
+		go run keyvalueserver.go 
+
+		OR
+	
+		by executing kvstore binary file
 
 
 3. Then client can connect to the server by using following command
-	telnet <ip address of server> <port number(here it is 1204)>
+
+	telnet < ip address of server > < port number(here it is 1204) >
+	
 	e.g telnet localhost 1204
 
 
@@ -26,16 +30,22 @@ The Key-Value store
 6. Operations performed on client side
 	- Type 'help' and press enter to see all commands.
 	- Store key-value pair by using follwing command (space is not allowed in key)
-		set <key> <value>
+	
+		set < key > < value >
 	- Update key-value pair by using follwing command
-		set <key> <value>
+	
+		set < key > < value >
 	- Retrive value by using follwing command
-		get <key>
+		
+		get < key >
 	- Delete key-value pair by using follwing command
-		delete <key>
+		
+		delete < key >
 	- Rename key by using follwing command
-		rename <oldkey> <newkey>
+		
+		rename < oldkey > < newkey >
 	- List all keys by using follwing command
+		
 		list
 
 7. Operation performed on server side
@@ -53,9 +63,13 @@ The Key-Value store
 	
 
 References -
+
 1. Logging - http://www.goinggo.net/2013/11/using-log-package-in-go.html
+
 2. Main idea - https://github.com/grahamking/Key-Value-Polyglot/blob/master/memg.go
+
 3. Read file - http://rosettacode.org/wiki/Read_a_file_line_by_line#Go
+
 4. Append data in file - http://stackoverflow.com/questions/7151261/append-to-a-file-in-go
 
 

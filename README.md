@@ -3,21 +3,27 @@ The Key-Value store
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-1. Start the server by running following command
+1. Copy "/usr/lib/go/src/pkg/github.com/onkarkore/kvstore/createfile.py" to current working directory.
+
+
+2. Start the server by running following command
 	go run keyvalueserver.go
+	OR
+	by executing keystore binary file
 
 
-2. Then client can connect to the server by using following command
-	telnet <ip address of server> <port number>
+3. Then client can connect to the server by using following command
+	telnet <ip address of server> <port number(here it is 1204)>
+	e.g telnet localhost 1204
 
 
-3. Multiple clients can allow to connect by using same command
+4. Multiple clients can allow to connect by using same command
 
 
-4. Server is stopped by typing 'EXIT' on server side
+5. Server is stopped by typing 'EXIT' on server side
 
 
-5. Operations performed on client side
+6. Operations performed on client side
 	- Type 'help' and press enter to see all commands.
 	- Store key-value pair by using follwing command (space is not allowed in key)
 		set <key> <value>
@@ -32,7 +38,7 @@ The Key-Value store
 	- List all keys by using follwing command
 		list
 
-6. Operation performed on server side
+7. Operation performed on server side
 	- Type 'EXIT' to stop server and close all connections with client
 	- Main function creates log file "log.txt"
 	- Logging is done at every step to recover key-value pairs after failure (failure like if we updated or deleted key-value pair 		  then it will only affect map but "input.txt" contain old data. At the same time if server crashed or power failure cause 		  server to stop abnormally then our data become inconsistent.)
